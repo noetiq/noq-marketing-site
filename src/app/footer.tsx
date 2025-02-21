@@ -1,28 +1,38 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 const links = [
-  { text: "About", href: "/about" },
-  { text: "Solutions", href: "/solutions" },
-  { text: "Research Blog", href: "/blog" },
-  { text: "Contact Us", href: "/contact" },
-];
+  { text: 'About', href: '/about' },
+  { text: 'Solutions', href: '/solutions' },
+  { text: 'Research Blog', href: '/blog' },
+  { text: 'Contact Us', href: '/contact' },
+]
 
 const socialLinks = [
-  { text: "Twitter", href: "https://twitter.com/noetiq", icon: "mdi:twitter" },
-  { text: "LinkedIn", href: "https://linkedin.com/company/noetiq", icon: "mdi:linkedin" },
-  { text: "GitHub", href: "https://github.com/noetiq", icon: "mdi:github" },
-];
+  { text: 'Twitter', href: 'https://twitter.com/noetiq', icon: 'mdi:twitter' },
+  {
+    text: 'LinkedIn',
+    href: 'https://linkedin.com/company/noetiq',
+    icon: 'mdi:linkedin',
+  },
+  { text: 'GitHub', href: 'https://github.com/noetiq', icon: 'mdi:github' },
+]
 
-const year = new Date().getFullYear();
+const year = new Date().getFullYear()
 
 const Footer = () => {
   return (
     <footer className="bg-[#4B3832] py-6 text-[#F5EFE6]">
       <div className="container mx-auto text-center px-6">
-        <p className="text-lg">&copy; {year} Noetiq Research. All rights reserved.</p>
+        <p className="text-lg">
+          &copy; {year} Noetiq Research. All rights reserved.
+        </p>
         <nav className="mt-4">
           {links.map(({ text, href }) => (
-            <Link key={href} href={href} className="mx-4 text-[#EFE3D7] hover:underline">
+            <Link
+              key={href}
+              href={href}
+              className="mx-4 text-[#EFE3D7] hover:underline"
+            >
               {text}
             </Link>
           ))}
@@ -43,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

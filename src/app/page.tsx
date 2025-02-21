@@ -1,7 +1,7 @@
 // pages/index.tsx
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -19,8 +19,8 @@ export default function Home() {
           className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden"
           style={{
             backgroundImage: "url('/Francium.jpeg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
           <div className="absolute inset-0 bg-[#F5EFE6]/80 backdrop-blur-sm"></div>
@@ -41,7 +41,8 @@ export default function Home() {
               PiRL Framework
             </h2>
             <p className="max-w-xl text-lg text-[#6F5844] mt-4">
-              Experience the potential of adaptive learning algorithms integrated with real-world physics.
+              Experience the potential of adaptive learning algorithms
+              integrated with real-world physics.
             </p>
             <Link
               href="/solutions"
@@ -68,7 +69,8 @@ export default function Home() {
                 Introducing Our Latest Breakthrough
               </h2>
               <p className="mt-4 text-lg text-[#6F5844]">
-                Discover how our proprietary ML technology is redefining the way businesses approach efficiency and innovation.
+                Discover how our proprietary ML technology is redefining the way
+                businesses approach efficiency and innovation.
               </p>
               <Link
                 href="/solutions"
@@ -82,7 +84,9 @@ export default function Home() {
 
         <section className="py-16 bg-[#EDE0D4]">
           <div className="container mx-auto text-center px-6">
-            <h2 className="text-4xl font-bold text-[#4B3832] mb-12">What We Do</h2>
+            <h2 className="text-4xl font-bold text-[#4B3832] mb-12">
+              What We Do
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6 bg-white shadow-lg rounded-lg">
                 <Image
@@ -92,7 +96,9 @@ export default function Home() {
                   height={64}
                   className="mx-auto mb-6"
                 />
-                <h3 className="text-2xl font-semibold text-[#4B3832]">We Build Solutions</h3>
+                <h3 className="text-2xl font-semibold text-[#4B3832]">
+                  We Build Solutions
+                </h3>
                 <p className="mt-4 text-[#6F5844]">
                   Crafting proprietary ML algorithms tailored to industry needs.
                 </p>
@@ -105,7 +111,9 @@ export default function Home() {
                   height={64}
                   className="mx-auto mb-6"
                 />
-                <h3 className="text-2xl font-semibold text-[#4B3832]">We Conduct Research</h3>
+                <h3 className="text-2xl font-semibold text-[#4B3832]">
+                  We Conduct Research
+                </h3>
                 <p className="mt-4 text-[#6F5844]">
                   Expanding the boundaries of what ML can achieve.
                 </p>
@@ -118,9 +126,12 @@ export default function Home() {
                   height={64}
                   className="mx-auto mb-6"
                 />
-                <h3 className="text-2xl font-semibold text-[#4B3832]">We Transform Problems</h3>
+                <h3 className="text-2xl font-semibold text-[#4B3832]">
+                  We Transform Problems
+                </h3>
                 <p className="mt-4 text-[#6F5844]">
-                  Turning inefficiencies into opportunities with scalable technology.
+                  Turning inefficiencies into opportunities with scalable
+                  technology.
                 </p>
               </div>
             </div>
@@ -129,15 +140,17 @@ export default function Home() {
 
         <section className="py-16 bg-[#EDE0D4]">
           <div className="container mx-auto text-center px-6">
-            <h2 className="text-4xl font-bold text-[#4B3832] mb-12">Explore Our Reach</h2>
+            <h2 className="text-4xl font-bold text-[#4B3832] mb-12">
+              Explore Our Reach
+            </h2>
             <div
               id="chart-container"
               className="relative mx-auto"
-              style={{ height: "400px" }}
+              style={{ height: '400px' }}
             ></div>
           </div>
         </section>
       </div>
     </>
-  );
+  )
 }

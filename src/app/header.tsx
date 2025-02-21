@@ -1,65 +1,64 @@
-"use client";
+'use client'
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { TfiEmail } from "react-icons/tfi";
-import { FaLinkedin } from "react-icons/fa6";
-import "@fontsource/anuphan";
+import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
+import { FaXTwitter } from 'react-icons/fa6'
+import { FaGithub } from 'react-icons/fa'
+import { TfiEmail } from 'react-icons/tfi'
+import { FaLinkedin } from 'react-icons/fa6'
+import '@fontsource/anuphan'
 
 interface HeaderProps {
-  isSticky?: boolean;
+  isSticky?: boolean
 }
 
 const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
-  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [solutionsOpen, setSolutionsOpen] = useState(false)
+  const pathname = usePathname()
 
-  const solutionsDesktopRef = useRef<HTMLDivElement>(null);
-  const solutionsMobileRef = useRef<HTMLLIElement>(null);
+  const solutionsDesktopRef = useRef<HTMLDivElement>(null)
+  const solutionsMobileRef = useRef<HTMLLIElement>(null)
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       const desktopContains =
         solutionsDesktopRef.current &&
-        solutionsDesktopRef.current.contains(e.target as Node);
+        solutionsDesktopRef.current.contains(e.target as Node)
       const mobileContains =
         solutionsMobileRef.current &&
-        solutionsMobileRef.current.contains(e.target as Node);
+        solutionsMobileRef.current.contains(e.target as Node)
       if (!desktopContains && !mobileContains) {
-        setSolutionsOpen(false);
+        setSolutionsOpen(false)
       }
     }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () =>
-      document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   const navLinkClass = (href: string) =>
     `transition hover:text-[#8C6A5E] ${
-      pathname === href ? "text-[#8C6A5E] font-bold" : "text-[#4B3832]"
-    }`;
+      pathname === href ? 'text-[#8C6A5E] font-bold' : 'text-[#4B3832]'
+    }`
 
   const solutionsButtonClass = () =>
     `flex items-center transition hover:text-[#8C6A5E] ${
-      pathname.startsWith("/solutions")
-        ? "text-[#8C6A5E] font-bold"
-        : "text-[#4B3832]"
-    }`;
+      pathname.startsWith('/solutions')
+        ? 'text-[#8C6A5E] font-bold'
+        : 'text-[#4B3832]'
+    }`
 
   const handleMobileLinkClick = () => {
-    setMenuOpen(false);
-    setSolutionsOpen(false);
-  };
+    setMenuOpen(false)
+    setSolutionsOpen(false)
+  }
 
   return (
     <header
       className={`bg-[#F5EFE6] border-b border-[#EDE0D4] shadow-md select-none ${
-        isSticky ? "sticky top-0 z-50" : ""
+        isSticky ? 'sticky top-0 z-50' : ''
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-2 px-6 relative">
@@ -95,10 +94,9 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
           </Link>
         </div>
 
-
         <div className="flex items-center justify-center h-12">
           <nav className="hidden md:flex md:justify-center md:space-x-8 text-[#4B3832] font-light font-[Anuphan]">
-            <Link href="/" className={navLinkClass("/")}>
+            <Link href="/" className={navLinkClass('/')}>
               Home
             </Link>
             <div className="relative" ref={solutionsDesktopRef}>
@@ -111,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
                 <span>Solutions</span>
                 <svg
                   className={`ml-1 w-4 h-4 transition-transform ${
-                    solutionsOpen ? "rotate-180" : ""
+                    solutionsOpen ? 'rotate-180' : ''
                   }`}
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -154,10 +152,10 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
                 </div>
               )}
             </div>
-            <Link href="/blog" className={navLinkClass("/blog")}>
+            <Link href="/blog" className={navLinkClass('/blog')}>
               Research Blog
             </Link>
-            <Link href="/about" className={navLinkClass("/about")}>
+            <Link href="/about" className={navLinkClass('/about')}>
               About
             </Link>
           </nav>
@@ -205,14 +203,14 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
         </div>
       </div>
 
-      <div className={`md:hidden ${menuOpen ? "block" : "hidden"} p-4`}>
+      <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'} p-4`}>
         <nav>
           <ul className="flex flex-col space-y-2 text-[#4B3832] font-light font-[Anuphan]">
             <li>
               <Link
                 href="/"
                 onClick={handleMobileLinkClick}
-                className={navLinkClass("/")}
+                className={navLinkClass('/')}
               >
                 Home
               </Link>
@@ -227,7 +225,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
                 <span>Solutions</span>
                 <svg
                   className={`ml-1 w-4 h-4 transition-transform ${
-                    solutionsOpen ? "rotate-180" : ""
+                    solutionsOpen ? 'rotate-180' : ''
                   }`}
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -275,7 +273,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
               <Link
                 href="/blog"
                 onClick={handleMobileLinkClick}
-                className={navLinkClass("/blog")}
+                className={navLinkClass('/blog')}
               >
                 Research Blog
               </Link>
@@ -284,7 +282,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
               <Link
                 href="/about"
                 onClick={handleMobileLinkClick}
-                className={navLinkClass("/about")}
+                className={navLinkClass('/about')}
               >
                 About
               </Link>
@@ -293,7 +291,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
         </nav>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
