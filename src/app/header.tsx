@@ -14,7 +14,7 @@ interface HeaderProps {
   isSticky?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
+const Header: React.FC<HeaderProps> = ({ isSticky = true }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const pathname = usePathname();
