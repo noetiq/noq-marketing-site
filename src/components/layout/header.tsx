@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
 
   const solutionsButtonClass = () =>
     `flex items-center transition hover:text-[#8C6A5E] ${
-      pathname.startsWith('/solutions')
+      (pathname ?? '').startsWith('/solutions')
         ? 'text-[#8C6A5E] font-bold'
         : 'text-[#4B3832]'
     }`
@@ -193,11 +193,11 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
             className="flex items-center"
           >
             <Image
-              src="/logos/huggingface-text.svg"
+              src="/logos/hf-icon.svg"
               alt="Hugging Face Logo"
-              className="h-4 w-auto transition duration-300 hover:brightness-75"
-              width={50}
-              height={20}
+              className="h-5 w-auto transition duration-300 hover:brightness-75"
+              width={100}
+              height={100}
             />
           </a>
         </div>

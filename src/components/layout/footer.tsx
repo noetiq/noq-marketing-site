@@ -11,7 +11,7 @@ const socialLinks = [
   { text: 'Twitter', href: 'https://twitter.com/noetiq', icon: 'mdi:twitter' },
   {
     text: 'LinkedIn',
-    href: 'https://linkedin.com/company/noetiq',
+    href: 'https://linkedin.com/company/noetiq-research',
     icon: 'mdi:linkedin',
   },
   { text: 'GitHub', href: 'https://github.com/noetiq', icon: 'mdi:github' },

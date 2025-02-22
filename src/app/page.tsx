@@ -1,4 +1,3 @@
-// pages/index.tsx
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,7 +17,7 @@ export default function Home() {
         <section
           className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden"
           style={{
-            backgroundImage: "url('/Francium.jpeg')",
+            backgroundImage: "url('/francium.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
