@@ -64,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky = false }) => {
       <div className="container mx-auto flex items-center justify-between py-2 px-6 relative">
         <div className="flex items-center space-x-4">
           <button
-            className="md:hidden p-0 text-[#4B3832] hover:text-[#8C6A5E] focus:outline-none"
+            className="md:hidden p-0 text-[#4B3832] hover:text-[#8C6A5E] focus:outline-hidden"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             <svg

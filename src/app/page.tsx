@@ -23,8 +23,8 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-[#F5EFE6]/80 backdrop-blur-sm"></div>
-          <div className="relative z-10 flex flex-col items-center justify-center max-w-screen-lg mx-auto px-4">
+          <div className="absolute inset-0 bg-[#F5EFE6]/80 backdrop-blur-xs"></div>
+          <div className="relative z-10 flex flex-col items-center justify-center max-w-(--breakpoint-lg) mx-auto px-4">
             <h1 className="font-extrabold text-6xl md:text-8xl text-[#4B3832] mb-4 font-[Anuphan] tracking-tight">
               Introducing
             </h1>
@@ -46,7 +46,7 @@ export default function Home() {
             </p>
             <Link
               href="/solutions"
-              className="inline-block mt-6 px-6 py-3 rounded bg-[#8C6A5E] text-white shadow-md hover:bg-[#735649] transition"
+              className="inline-block mt-6 px-6 py-3 rounded-sm bg-[#8C6A5E] text-white shadow-md hover:bg-[#735649] transition"
             >
               Learn More
             </Link>
@@ -74,7 +74,7 @@ export default function Home() {
               </p>
               <Link
                 href="/solutions"
-                className="inline-block mt-6 px-6 py-3 text-white bg-[#8C6A5E] rounded shadow-lg hover:bg-[#735649] transition"
+                className="inline-block mt-6 px-6 py-3 text-white bg-[#8C6A5E] rounded-sm shadow-lg hover:bg-[#735649] transition"
               >
                 Learn More
               </Link>
