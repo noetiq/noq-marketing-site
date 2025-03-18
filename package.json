@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fontsource/anuphan": "^5.1.1",
+    "@fontsource/anuphan": "^5.2.5",
     "@tailwindcss/postcss": "^4.0.14",
     "next": "15.2.1",
     "react": "^19.0.0",
